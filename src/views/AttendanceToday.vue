@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <GroupList />
-    </div>
+    <GroupList />
 </template>
 
 <script>

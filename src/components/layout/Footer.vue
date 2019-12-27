@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="margin-bottom:2rem" >
-            <ul class="navbar-nav mr-auto">
+    <div class="container">
+        <nav class="navbar navbar-expand navbar-dark bg-dark fixed-bottom">
+            <ul class="navbar-nav nav-fill w-100">
                 <li class="nav-item">
                     <router-link to="/login" class="nav-link">Login</router-link>
                 </li>
@@ -21,12 +21,16 @@
 
 <script>
 export default {
-    name: "Header"
+    name: "Footer"
 }
 </script>
 
 <style scoped>
-    a {
-        padding-right: 5px;
+    nav {
+        font-size:14px;
+    }
+    .footer {
+        justify-content: space-around;
+        
     }
 </style>
