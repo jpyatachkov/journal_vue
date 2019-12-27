@@ -1,6 +1,7 @@
 import Index from './views/Index.vue';
 import Login from './views/Login.vue';
 import SignUp from './views/SignUp.vue';
+import AttendanceToday from './views/AttendanceToday.vue'
 
 export default [
   // Redirects to /route-one as the default route.
@@ -30,6 +31,11 @@ export default [
       path: '/signup',
       name: 'signup',
       component: SignUp
+  },
+  {
+    path: '/attendance_today',
+    name: 'attendance_today',
+    component: AttendanceToday
   }
 //   {
 //     // Route two takes the route parameter "id".

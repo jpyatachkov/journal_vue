@@ -1,8 +1,16 @@
 <template>
-    <h3>Sign Up Page</h3>
+    <div>
+        <h3>Sign Up Page</h3>
+        <SignUpForm />
+    </div>
 </template>
 <script>
+import SignUpForm from '../components/SignUpForm'
+
 export default {
-    name: 'SignUp'
+    name: 'SignUp',
+    components: {
+        SignUpForm
+    }
 }
 </script>
