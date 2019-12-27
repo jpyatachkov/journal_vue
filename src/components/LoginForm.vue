@@ -18,7 +18,6 @@ export default {
             //validate
             //send request
             //redirect if success
-            console.log("hello")
             this.$router.push('index')
         }
     }

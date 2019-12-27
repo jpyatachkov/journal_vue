@@ -29,8 +29,4 @@ export default {
     nav {
         font-size:14px;
     }
-    .footer {
-        justify-content: space-around;
-        
-    }
 </style>

@@ -1,21 +1,26 @@
 <template>
   <div class="container">
-    <GroupListTable :classes="classes">
-        <GroupListItem v-for="(member, index) in group" :key="index"
-        :name="member['name']" :number="++index" :column-span="classes.length"/>
-    </GroupListTable>
+    <group-list-table :subjects="studySubjects">
+        <group-list-table-item v-for="(member, index) in group" :key="index"
+        :name="member.name" :number="index+1" :column-span="subjectsCount"/>
+    </group-list-table>
+    <form @submit="sendData" style="margin-top:1rem">
+      <input type="submit" value="Submit" class="btn btn-outline-success">
+    </form>
   </div>
 </template>
 
 <script>
-import GroupListItem from './GroupListItem'
+import GroupListTableItem from './GroupListTableItem'
 import GroupListTable from './GroupListTable'
 
 export default {
     name: 'GroupList',
-    props: ['date'],
+    props: {
+      date: String
+    },
     components: {
-      GroupListItem,
+      GroupListTableItem,
       GroupListTable
     },
     data: () => {
@@ -33,7 +38,12 @@ export default {
           { name: 'Julo' },
           { name: 'Hdyady' }
         ],
-        classes: ['ЯИП', 'ТВиМС', 'Физика', 'Физра']
+        studySubjects: ['ЯИП', 'ТВиМС', 'Физика', 'Физра']
+      }
+    },
+    computed: {
+      subjectsCount() {
+        return this.studySubjects.length
       }
     },
     methods: {
@@ -42,6 +52,9 @@ export default {
       },
 
       fetchDateActivities() {
+
+      },
+      sendData() {
 
       }
     }

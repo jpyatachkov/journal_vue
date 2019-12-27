@@ -1,7 +1,7 @@
 <template>
     <div>
         <h3>Sign Up Page</h3>
-        <SignUpForm />
+        <sign-up-form />
     </div>
 </template>
 <script>

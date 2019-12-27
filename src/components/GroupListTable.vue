@@ -1,10 +1,10 @@
 <template>
-    <table class="table table-bordered" style="margin:0; padding: 0;">
+    <table class="table table-bordered">
       <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Name</th>
-          <th scope="col" v-for="item in classes" :key="item">
+          <th scope="col" v-for="item in subjects" :key="item">
             {{ item }}
           </th>
         </tr>
@@ -17,6 +17,8 @@
 <script>
 export default {
     name: 'GroupListTable',
-    props: ['classes']
+    props: {
+        subjects: Array
+    }
 }
 </script>

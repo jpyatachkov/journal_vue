@@ -1,5 +1,5 @@
 <template>
-    <GroupList />
+    <group-list />
 </template>
 
 <script>
