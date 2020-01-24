@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <group-list-table :subjects="studySubjects">
-        <group-list-table-item v-for="(member, index) in group" :key="index"
+    <Table :subjects="studySubjects">
+        <table-row-editable v-for="(member, index) in group" :key="index"
         :name="member.name" :number="index+1" :column-span="subjectsCount"/>
-    </group-list-table>
+    </Table>
     <form @submit="sendData" style="margin-top:1rem">
       <input type="submit" value="Submit" class="btn btn-outline-success">
     </form>
@@ -11,17 +11,17 @@
 </template>
 
 <script>
-import GroupListTableItem from './GroupListTableItem'
-import GroupListTable from './GroupListTable'
+import TableRowEditable from './TableRowEditable'
+import Table from './Table'
 
 export default {
-    name: 'GroupList',
+    name: 'List',
     props: {
       date: String
     },
     components: {
-      GroupListTableItem,
-      GroupListTable
+      TableRowEditable,
+      Table
     },
     data: () => {
       return {

@@ -1,14 +1,14 @@
 <template>
-    <group-list />
+    <list />
 </template>
 
 <script>
-import GroupList from '../components/GroupList'
+import List from '../components/List'
 
 export default {
     name: 'AttendanceToday',
     components: {
-        GroupList
+        List
     }
 }
 </script>

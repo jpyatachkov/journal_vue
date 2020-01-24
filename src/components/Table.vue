@@ -4,7 +4,7 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Name</th>
-          <th scope="col" v-for="item in subjects" :key="item">
+          <th scope="col" v-for="item in headers" :key="item">
             {{ item }}
           </th>
         </tr>
@@ -16,9 +16,9 @@
 </template>
 <script>
 export default {
-    name: 'GroupListTable',
+    name: 'Table',
     props: {
-        subjects: Array
+        headers: Array
     }
 }
 </script>
