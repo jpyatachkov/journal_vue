@@ -2,8 +2,8 @@
     <tr>
         <th scope="row">{{ number }}</th>
         <td>{{ name }}</td>
-        <td :id="name+'_'+i"
-        v-for="i in columnSpan" :key="i" ></td>
+        <td :id="name+'_'+index"
+            v-for="(item, index) in attendance" :key="item" :class="{checked: item}"></td>
     </tr>
 </template>
 
