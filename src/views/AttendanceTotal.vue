@@ -4,8 +4,9 @@
             <button-select text="Week" @clicked="switchDisplayMode" :selected="displayWeek" />
             <button-select text="Subject" @clicked="switchDisplayMode" :selected="!displayWeek" />
         </div>
-        <Select :options="dateOptions" id="1" v-if="displayWeek"/>
-        <Select :options="subjectOptions" id="2" v-else />
+        <Select :options="dateOptions" id="1" v-model="displayOption"  v-if="displayWeek"/>
+        <Select :options="subjectOptions" id="2" v-model="displayOption" v-else />
+            {{ displayOption }}
         <Table :headers="tableHeaders">
             <table-row-static v-for="(item, index) in tableData" :key="index"
              :number="index+1" :attendance="item" :name="names[index]"/>
@@ -34,7 +35,8 @@ export default {
             tableHeaders: ["header1", "header2", "header3"],
             names: ["Abaturo", "Marmeladik", "Julo"],
             tableData: [[true, true, false], [true,true,true], [false,false,false]],
-            displayWeek: true
+            displayWeek: true,
+            displayOption: 'her'
         }
     },
     methods: {

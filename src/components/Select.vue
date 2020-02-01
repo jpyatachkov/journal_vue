@@ -1,6 +1,6 @@
 <template>
-    <select class="form-control" @change="sendOption()">
-        <option v-for="item in options" :key="item">
+    <select class="form-control" @change="$emit('change', $event.target.value)">
+        <option v-for="(item,index) in options" :key="item" :value="index">
             {{ item }}
         </option>
     </select>
@@ -12,10 +12,9 @@ export default {
     props: {
         options: Array
     },
-    methods: {
-        sendOption: () => {
-            return true
-      }
+    model: {
+        prop: 'value',
+        event: 'change'
     }
 }
 </script>
